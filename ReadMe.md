@@ -4,7 +4,7 @@ This is a simple website framework that implements a very basic routing format. 
 
 ## Installation ##
 
-Copy the entire directory into your working web directory of your choosing. There are a few settins you will need to change if you are working in either the root directory or a sub directory of your website. For example if you want the website located at your root, mywebsite.com versus a sub directory such as mywebsite.com/webframework. In the latter example your "working directory" is "/webframework" otherwise it's just "".
+Copy the entire directory into your working web directory of your choosing. There are a few settings you will need to change if you are working in either the root directory or a sub directory of your website. For example if you want the website located at your root, mywebsite.com versus a sub directory such as mywebsite.com/webframework. In the latter example your "working directory" is "/webframework" otherwise it's just "".
 
 In the .htaccess file change the rewrite rule line:
 
@@ -84,6 +84,6 @@ There are are 3 global alerts that can be used in the framework.
     $app['_warning'] (yellow alert)
     $app['_success'] (green alert)
 
-Once you assign a string to these warnings they will be displayed to the user (alerts.tpl) the next time the page is loaded then will be unset. A good use of these is on a POST form submit, you could assign a string to $app['_error'] then refresh the page. The POST data will properly be eliminated and the error message will be displayed on the new page load. If you or the user refreshes again the error will be gone.
+Once you assign a string to these warnings they will be displayed to the user (alerts.tpl) the next time the page is loaded they will be unset. A good use of these is on a POST form submit, you could assign a string to $app['_error'] then refresh the page. The POST data will properly be eliminated and the error message will be displayed on the new page load. If you or the user refreshes again the error will be gone.
 
 The favicon.ico and apple-touch-icon images should be changed with your logo. 
