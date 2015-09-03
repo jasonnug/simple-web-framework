@@ -12,9 +12,12 @@ $urlComponents = explode("?", $reqURI);
 
 $curPage = $urlComponents[0];
 
-
 // remove working directory from relative url
 $curPage = trim($curPage, $app['_working_dir']);
+
+if(empty($curPage)) {
+	$curPage = '/';
+}
 
 $getVars = $urlComponents[1];
 

@@ -27,7 +27,7 @@
             </li>
         {else if $page['active']}
             <li>
-                <a class="{if $curPage == $page['url']}active{/if}" href="{$page['url']}">
+                <a class="{if $curPage == $page['url']}active{/if}" href="{$app['_rel_url']}/{$page['url']}">
                     {if $page['icon'] != ""}
                         <i class="fa fa-{$page['icon']} fa-fw"></i> 
                     {/if}

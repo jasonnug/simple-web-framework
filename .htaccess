@@ -10,9 +10,6 @@ AddOutputFilterByType DEFLATE application/rss+xml
 AddOutputFilterByType DEFLATE application/javascript
 AddOutputFilterByType DEFLATE application/x-javascript
 
-# Old way of routing using 404 requests
-# ErrorDocument 404 /app/routing.php
-
 # New way using mod rewrite
 <IfModule mod_rewrite.c>
     RewriteEngine On
