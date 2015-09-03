@@ -1,0 +1,34 @@
+/* ==========================================================================
+	Date: 12/18/2012
+	Description: Custom styles for Simple Web Framework
+========================================================================== */
+
+///////////////// Colors ////////////////////
+
+$vltblue: #2BC6FF; $ltblue: #0FAFEC; $blue: #005DAB; $darkblue: #005580; $dkblue: #005580;
+$ltorange: #FFB868; $orange: #EE8924; $dkorange: #EF6118; $vdkorange: #DF4E07;
+$lightorange: #FFB868; $orange: #EE8924; $darkorange: #EF6118; $darkerorange: #DF4E07;
+$ltgray: #91A8B7; $gray: #828282; $dkgray: #455560;
+$darkgrey: #455560; $grey: #828282; $lightgrey: #91A8B7;
+$ltgreen: #51CC1C; $green: #339213; $dkgreen: #21560C;
+$lightgreen: #A5E24F; $green: #89BF41; $darkgreen: #739E38;
+$purple: #AA7BC9; $lightpurple: #D9A0FF; $verylightpurple: #E0B2FF;
+$ltred: #EB684A; $red: #E61A23; $yellow: yellow;
+$tteal: rgba(122,224,180,0.5);
+
+/////////////////// Default styling ///////////////////////
+
+html { 
+	min-height: 100%; overflow-y: scroll;
+	//font-family: 'Open Sans', sans-serif !important;
+}
+body { min-height: 100%; padding-top: 70px; }
+a { text-decoration: none; color: $blue; }
+a:hover { text-decoration: none; color: $ltblue; }
+a.cursor { cursor: pointer; }
+hr { border-top: 1px solid #ddd; }
+th { color: #455560; }
+img { max-height: 100%; max-width: 100%; }
+
+////////////////// Website stylings ///////////////////
+

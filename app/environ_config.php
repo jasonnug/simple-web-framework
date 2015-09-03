@@ -1,0 +1,28 @@
+<?php
+/*
+* file: environ_config.php
+* author: Jason Nugent
+* description: set up environment variables; doc_root, working_dir etc. 
+*/
+
+// Iniitialize global app object.
+$app = array();
+// Global application alert messages.
+$app['_error'] = "";
+$app['_warning'] = "";
+$app['_success'] = "";
+
+// the root dir
+$app['_doc_root'] = $_SERVER['DOCUMENT_ROOT']; 
+// directory of project if not at the root (example "/framework"). set to "" if it's using the root
+$app['_working_dir'] = "/swf"; 
+// php includes will use this
+$app['_web_root'] = $app['_doc_root'] . $app['_working_dir']; 
+// base url
+$app['_host_name'] = $_SERVER['HTTP_HOST'];
+// relative url for entire website
+$app['_rel_url'] = "http://" . $app['_host_name'] . $app['_working_dir']; // change to https if using ssl
+// used in html header as the base url for relative urls. not needed if we're in the root directory.
+$app['_base_url'] = $app['_rel_url'] . "/index.php";
+
+?>

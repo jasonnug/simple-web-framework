@@ -1,0 +1,66 @@
+{
+    "404": {
+        "url": "404",
+        "title": "Error 404: Page Not Found",
+        "icon": "",
+        "active": false
+    },
+    "home": {
+        "url": "",
+        "title": "Home",
+        "icon": "home",
+        "active": true
+    },
+    "menu-one": {
+        "url": "one",
+        "title": "Menu One",
+        "icon": "hand-pointer-o",
+        "view_level": 0,
+        "edit_level": 99,
+        "active": true,
+        "pages": {
+            "menu-one-sub-page-one": {
+                "url": "one/one",
+                "title": "Sub Page One",
+                "icon": "cloud",
+                "view_level": 0,
+                "edit_level": 99,
+                "active": true
+            },
+            "menu-one-sub-page-two": {
+                "url": "one/two",
+                "title": "Sub Page Two",
+                "icon": "",
+                "view_level": 0,
+                "edit_level": 99,
+                "active": true
+            }
+        }
+    },
+    "menu-two": {
+        "url": "two",
+        "title": "Menu Two",
+        "icon": "hand-peace-o",
+        "view_level": 0,
+        "edit_level": 99,
+        "active": true,
+        "pages": {
+            "menu-two-sub-page-one": {
+                "url": "two/one",
+                "title": "Sub Page One",
+                "icon": "",
+                "view_level": 0,
+                "edit_level": 99,
+                "active": true
+            },
+            "menu-two-sub-page-two": {
+                "url": "two/two",
+                "title": "Sub Page Two",
+                "icon": "",
+                "view_level": 0,
+                "edit_level": 99,
+                "active": true
+            }
+        }
+    }
+}
