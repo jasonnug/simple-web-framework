@@ -15,6 +15,13 @@ header("Connection: keep-alive");
 global $start;
 $start = microtime(1);
 
+// Check to see that the working directory is a directory.
+if (!is_dir($app['_web_root'])) {
+	print '<b>Error!</b> working directory not present.<br />';
+	print '<b>Fix:</b> Site should be in: ' . $app['_web_root'];
+	exit;
+}
+
 // Krumo debugging include
 require($app['_web_root'] . '/app/krumo/class.krumo.php');
 
