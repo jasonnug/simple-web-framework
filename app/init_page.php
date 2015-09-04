@@ -60,6 +60,13 @@ $smarty->setCacheDir($app['_web_root'] . '/app/smarty/cache');
 $smarty->setConfigDir($app['_web_root'] . '/app/smarty/configs');
 $smarty->error_reporting = E_ALL ^ E_NOTICE;
 
+// Check that the smarty directories are writeable
+if (!is_writeable($smarty->compile_dir)) {
+	print '<b>Error!</b> compile directory needs to be writeable. <br />';
+	print '<b>Fix:</b> chmod a+w ' . $smarty->compile_dir;
+	exit;
+}
+
 // Start Session
 session_start();
 
