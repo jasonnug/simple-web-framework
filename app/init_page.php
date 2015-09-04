@@ -18,9 +18,32 @@ $start = microtime(1);
 // Krumo debugging include
 require($app['_web_root'] . '/app/krumo/class.krumo.php');
 
+// Global functions
+// Borrowed from : https://github.com/igorw/get-in
+// Discussion    : http://nikic.github.io/2014/01/10/The-case-against-the-ifsetor-function.html
+function get_in(array $array, array $keys, $default = null) {
+    if (!$keys) {
+        return $array;
+    }
+
+    // This is a micro-optimization, it is fast for non-nested keys, but fails for null values
+    if (count($keys) === 1 && isset($array[$keys[0]])) {
+        return $array[$keys[0]];
+    }
+    $current = $array;
+    foreach ($keys as $key) {
+        if (!array_key_exists($key, $current)) {
+            return $default;
+        }
+        $current = $current[$key];
+    }
+
+    return $current;
+}
+
 // Global debug setup allows for debug querying.
 $global_debug;
-if($_GET['debug'] == 1 || $global_debug) {
+if(get_in($_GET, ['debug']) == 1 || !empty($global_debug)) {
 	$global_debug = true;
 } else {
 	$global_debug = false;
@@ -49,10 +72,9 @@ read_json('Pages');
 
 // Get current page name
 $app['_curPath'] = "";
-if($directory) {
+if(!empty($directory)) {
     $app['_curPath'] = $directory . "/" . basename(getUrl());
 } else {
     $app['_curPath'] = basename(getUrl());
 }
 
-?>

@@ -19,7 +19,7 @@ if(empty($curPage)) {
 	$curPage = '/';
 }
 
-$getVars = $urlComponents[1];
+$getVars = get_in($urlComponents, [1]);
 
 if(!empty($getVars)) {
 	$vars = explode("&", $getVars);
