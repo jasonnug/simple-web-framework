@@ -1,6 +1,6 @@
 # Simple Web Framework #
 
-This is a simple website framework that implements a very basic routing format. The routing is handled by a modrewrite to redirect all requests to app/routing.php which handles serving the correct templates. This uses php, the Smarty templating engine, and boostrap3.
+This is a simple website framework that implements a very basic routing format. The routing is handled by a modrewrite to redirect all requests to app/routing.php which handles serving the correct templates. This uses php, the Smarty templating engine, and bootstrap3.
 
 ## Installation ##
 
